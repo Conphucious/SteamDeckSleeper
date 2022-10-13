@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sleep_timer=5
+sleep_timer=10
 steam_dir="/home/deck/.local/share/Steam/steamapps/downloading"
 
 function is_steam_downloading() {
