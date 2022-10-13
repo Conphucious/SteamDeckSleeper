@@ -1,8 +1,10 @@
+#!/bin/bash
+
 display_gui() {
     time=$(zenity --list --title="SDS :: Configuration" --column="Time to terminate Steam Deck" \ "Until download complete" \ "15 minutes" \ "30 minutes" \ "60 minutes")
     xrandr --output eDP --brightness 0
     if [[ "$time" == " 15 minutes" ]]; then
-        timeout 5s bash "$driver"
+        timeout 1m bash "$driver"
     elif [[ "$time" == " 30 minutes" ]]; then
         timeout 30m bash "$driver"
     elif [[ "$time" == " 60 minutes" ]]; then
@@ -10,7 +12,7 @@ display_gui() {
     else
         bash "$driver"
     fi
-    shutdown
+    shutdown now
 }
 
 driver="core.sh"
