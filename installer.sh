@@ -17,7 +17,7 @@ if [ -d "$path_name" ]; then
     rm -R $path_name
 fi
 mkdir $path_name
-curl -o ~/Desktop/JSDS/run.sh "$git_repo_url/sleep-downloader.sh"
+curl -o ~/Desktop/JSDS/sleep-downloader.sh "$git_repo_url/sleep-downloader.sh"
 curl -o ~/Desktop/JSDS/core.sh "$git_repo_url/core.sh"
 
 # Permissions
