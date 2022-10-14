@@ -29,4 +29,4 @@ if [ "$?" != 0 ]; then
     exit 1;
 fi
 steamos-add-to-steam ~/Desktop/"$path/$file_name".sh
-zenity --info --width=500 --text="Installation complete for JSDS!"
+zenity --info --width=500 --text="Installation complete!"
