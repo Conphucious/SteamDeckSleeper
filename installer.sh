@@ -13,6 +13,9 @@ fi
 
 # Download the scripts
 cd ~/Downloads/
+if [ -d "$path_name" ]; then
+    rm -R $path_name
+fi
 mkdir $path_name
 curl -o ~/Downloads/JSDS/run.sh "$git_repo_url/run.sh"
 curl -o ~/Downloads/JSDS/core.sh "$git_repo_url/core.sh"
@@ -23,4 +26,4 @@ chmod 555 ~/Downloads/JSDS/core.sh
 
 # Finish
 steamos-add-to-steam ~/Downloads/JSDS/run.sh
-zenity --info --text="Installation complete for JSDS!"
+zenity --info --width=500 --text="Installation complete for JSDS!"
