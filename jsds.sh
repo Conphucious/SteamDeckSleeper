@@ -21,5 +21,5 @@ while [ $? == 1 ]; do
     is_steam_downloading
 done
 xrandr --output eDP --brightness 1
-zenity --info --width=500 --text="Finished downloads..."
+timeout 1s zenity --info --width=500 --text="Finished downloads..."
 shutdown now
