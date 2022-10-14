@@ -4,8 +4,8 @@ sleep_timer=10
 steam_dir="/home/deck/.local/share/Steam/steamapps/downloading"
 
 function is_steam_downloading() {
-    result=$(ls -l "$steam_dir") 
-    if [[ "$result" == "total 0" ]]; then
+    result=$(find "$steam_dir" -maxdepth 1 -type f)
+    if [ -z "${result}" ]; then
         return 0
     else
         return 1

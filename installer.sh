@@ -4,7 +4,6 @@
 set -e
 git_repo_url="https://raw.githubusercontent.com/Conphucious/SteamDeckSleeper/master"
 path_name="JSDS"
-install_path="~/Downloads/JSDS/"
 
 # Prompt for installation
 zenity --question --width=500 --text="Do you want to install JSDS (Jimmy's Steam Deck Sleeper)?"
@@ -15,13 +14,13 @@ fi
 # Download the scripts
 cd ~/Downloads/
 mkdir $path_name
-curl -o ~/Downloads/"$path_name/run.sh" "$git_repo_url/run.sh"
-curl -o ~/Downloads/"$path_name/core.sh" "$git_repo_url/core.sh"
+curl -o ~/Downloads/JSDS/run.sh "$git_repo_url/run.sh"
+curl -o ~/Downloads/JSDS/core.sh "$git_repo_url/core.sh"
 
 # Permissions
-chmod 555 ~/Downloads/"$path_name/run.sh"
-chmod 555 ~/Downloads/"$path_name/core.sh"
+chmod 555 ~/Downloads/JSDS/run.sh
+chmod 555 ~/Downloads/JSDS/core.sh
 
 # Finish
-steamos-add-to-steam ~/Downloads/"$path_name/run.sh"
+steamos-add-to-steam ~/Downloads/JSDS/run.sh
 zenity --info --text="Installation complete for JSDS!"

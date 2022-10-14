@@ -15,5 +15,5 @@ function display_gui() {
     shutdown now
 }
 
-driver="core.sh"
+driver="./core.sh"
 display_gui
