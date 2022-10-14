@@ -12,18 +12,17 @@ if [ "$?" != 0 ]; then
 fi
 
 # Download the scripts
-cd ~/Downloads/
+cd ~/Desktop/
 if [ -d "$path_name" ]; then
     rm -R $path_name
 fi
 mkdir $path_name
-curl -o ~/Downloads/JSDS/run.sh "$git_repo_url/run.sh"
-curl -o ~/Downloads/JSDS/core.sh "$git_repo_url/core.sh"
+curl -o ~/Desktop/JSDS/run.sh "$git_repo_url/run.sh"
+curl -o ~/Desktop/JSDS/core.sh "$git_repo_url/core.sh"
 
 # Permissions
-chmod 555 ~/Downloads/JSDS/run.sh
-chmod 555 ~/Downloads/JSDS/core.sh
+chmod 555 ~/Desktop/JSDS/run.sh
+chmod 555 ~/Desktop/JSDS/core.sh
 
 # Finish
-steamos-add-to-steam ~/Downloads/JSDS/run.sh
 zenity --info --width=500 --text="Installation complete for JSDS!"

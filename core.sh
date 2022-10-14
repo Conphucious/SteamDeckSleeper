@@ -12,13 +12,10 @@ function is_steam_downloading() {
     fi
 }
 
+zenity --info --width=500 --text="START"
 is_steam_downloading
 while [ $? == 1 ]; do
     echo 'waiting for downloading to finish...'
     sleep $sleep_timer
     is_steam_downloading
 done
-
-# xrandr --output eDP --brightness 0
-zenity --info --width=500 --text="Downloading in progress"
-# shutdown now

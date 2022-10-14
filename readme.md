@@ -21,9 +21,11 @@ Run on Konsole:
 
 # Usage
 
-You can either run this script manually via `bash ~/Downloads/run.sh` or through the steam library (non-steam game).
+You can either run this script manually via `bash ~/Desktop/run.sh` or double clicking the `run.sh` file.
 
 >Keep in mind, there is no way to reset the brightness and use the device again once this utility is activated. The only option is to restart the device to manually exit the utility. This utility is great for situations where you're about to go out but want some downloads finished without leaving your Steam Deck unattended all day on the charger. 
 
+There is no way to run this as a non-steam game utility unless you change your settings to allow for downloads while playing games and run a modified `core.sh` standalone.
+
 # Kudos
-- Scawp https://github.com/scawp/Steam-Deck.Shader-Cache-Killer
+- Inspiration from Scawp https://github.com/scawp/Steam-Deck.Shader-Cache-Killer
