@@ -28,5 +28,5 @@ zenity --question --width=500 --text="Do you want to add JSDS to your steam libr
 if [ "$?" != 0 ]; then
     exit 1;
 fi
-steamos-add-to-steam ~/Desktop/"$path/$file_name"
+steamos-add-to-steam ~/Desktop/$path/$file_name
 zenity --info --width=500 --text="Installation complete!"
