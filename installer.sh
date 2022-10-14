@@ -17,12 +17,17 @@ if [ -d "$path_name" ]; then
     rm -R $path_name
 fi
 mkdir $path_name
-curl -o ~/Desktop/JSDS/run.sh "$git_repo_url/run.sh"
+curl -o ~/Desktop/JSDS/run.sh "$git_repo_url/sleep-downloader.sh"
 curl -o ~/Desktop/JSDS/core.sh "$git_repo_url/core.sh"
 
 # Permissions
-chmod 555 ~/Desktop/JSDS/run.sh
+chmod 555 ~/Desktop/JSDS/sleep-downloader.sh
 chmod 555 ~/Desktop/JSDS/core.sh
 
 # Finish
+zenity --question --width=500 --text="Do you want to add JSDS to your steam library?"
+if [ "$?" != 0 ]; then
+    exit 1;
+fi
+steamos-add-to-steam ~/Downloads/JSDS/sleep-downloader.sh
 zenity --info --width=500 --text="Installation complete for JSDS!"
